@@ -1,0 +1,48 @@
+<html>
+
+<head></head>
+
+<body>
+    <input placeholder="enter name" />
+    <br />
+    <input placeholder="enter address" />
+    <br />
+    <input placeholder="enter phone no" />
+    <br />
+    <button>
+        add data
+    </button>
+    <br />
+
+    <table border="1" id="mytable">
+   
+    </table>
+
+    <script>
+        var content = "<tr><td>Name</td><td>Address</td><td>Phone no</td><td>action</td></tr>";
+        var data = [
+            {
+                name: "Akash",
+                address: "Bangalore",
+                phone: "987654321"
+            },
+            {
+                name: "Saras",
+                address: "Chennai",
+                phone: "24536457"
+            }
+        ];
+
+        for (var i = 0; i < data.length; i++) {
+            content = content +
+                "<tr> <td>" + data[i].name + "</td>" +
+                "<td>" + data[i].address + "</td>" +
+                "<td>" + data[i].phone + "</td>" +
+                "<td> <button> X </button> </td></tr>"
+        }
+
+        document.getElementById("mytable").innerHTML = content;
+    </script>
+</body>
+
+</html>
