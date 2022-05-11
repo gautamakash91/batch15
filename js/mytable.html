@@ -9,13 +9,13 @@
     <br />
     <input placeholder="enter phone no" />
     <br />
-    <button>
+    <button onclick="getUserData()">
         add data
     </button>
     <br />
 
     <table border="1" id="mytable">
-   
+
     </table>
 
     <script>
@@ -25,23 +25,28 @@
                 name: "Akash",
                 address: "Bangalore",
                 phone: "987654321"
-            },
-            {
-                name: "Saras",
-                address: "Chennai",
-                phone: "24536457"
             }
         ];
 
-        for (var i = 0; i < data.length; i++) {
-            content = content +
-                "<tr> <td>" + data[i].name + "</td>" +
-                "<td>" + data[i].address + "</td>" +
-                "<td>" + data[i].phone + "</td>" +
-                "<td> <button> X </button> </td></tr>"
+        function getUserData() {
+            data.push({
+                name: "Saras",
+                address: "Chennai",
+                phone: "76358"
+            })
+
+            for (var i = 0; i < data.length; i++) {
+                content = content +
+                    "<tr> <td>" + data[i].name + "</td>" +
+                    "<td>" + data[i].address + "</td>" +
+                    "<td>" + data[i].phone + "</td>" +
+                    "<td> <button> X </button> </td></tr>"
+            }
+
+            document.getElementById("mytable").innerHTML = content;
         }
 
-        document.getElementById("mytable").innerHTML = content;
+
     </script>
 </body>
 
