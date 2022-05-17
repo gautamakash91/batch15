@@ -12,22 +12,29 @@
         </ol>
 
         <script>
-            var content = "";
+            var content = [];
+
             function handleClick(){
                 var name = document.getElementById("name").value;
                 var address = document.getElementById("address").value;
                 var phone = document.getElementById("phone").value;
 
-                content =  content + '<li>'+name + address + phone + 
-                    '<button onclick="removeRow()">X</button>'
+                content.push('<li>'+name + address + phone + 
+                    '<button onclick="removeRow('+content.length+')">X</button>'
                     +
-                    '</li>';
+                    '</li>');
+                
+                console.log(content);
+                document.getElementById("name").value = "";
+                document.getElementById("address").value = "";
+                document.getElementById("phone").value = "";
 
-                document.getElementById("mylist").innerHTML = content;
+                document.getElementById("mylist").innerHTML = content.join('');
             }
 
-            function removeRow(){
-                console.log("hello from remove row")
+            function removeRow(index){
+                content.splice(index, 1);
+                document.getElementById("mylist").innerHTML = content.join('');
             }
         </script>
     </body>
