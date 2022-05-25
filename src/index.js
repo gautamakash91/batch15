@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Styling from "./components/styling";
+// import Styling from "./components/styling";
+import Alerts from "./components/alert";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Styling />
+    <Alerts />
   </React.StrictMode>
 );
 
