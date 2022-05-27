@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import Styling from "./components/styling";
-import Alerts from "./components/alert";
+// import Alerts from "./components/alert";
+import Arrays from "./components/arrays";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Alerts />
+    <Arrays />
   </React.StrictMode>
 );
 
