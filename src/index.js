@@ -5,11 +5,12 @@ import reportWebVitals from './reportWebVitals';
 // import Styling from "./components/styling";
 // import Alerts from "./components/alert";
 import Arrays from "./components/arrays";
+import Fetcher from "./components/fetcher";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Arrays />
+    <Fetcher />
   </React.StrictMode>
 );
 
